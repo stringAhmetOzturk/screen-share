@@ -2,6 +2,7 @@ import express from 'express' // Add this line to import express
 import fs from 'fs'
 import {db} from './config/connection.js'
 import cors from "cors"
+import {corsOptions} from './config/corsOptions.js'
 import { exec } from 'child_process'
 import bodyParser from 'body-parser'
 import http from 'http';
@@ -13,11 +14,9 @@ import bcrypt from "bcrypt"
 import path from 'path';
 import cookieParser from "cookie-parser"
 const app = express(); 
-const corsOptions = {
-  origin: ['http://localhost:3000','http://192.168.178.153:3000','http://192.168.178.131:3000','http://192.168.178.153:5000','http://192.168.178.131:5000',] // İzin vermek istediğiniz origin adresi
-};
 
-app.use(cors(corsOptions));
+
+app.use(cors());
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -25,9 +24,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.json())
 app.use(cookieParser())
 app.use(express.static(path.resolve(__dirname, 'public')));
-// app.get('*', (req, res) => {
-//     res.sendFile(path.resolve(__dirname, 'public', 'index.html'));
-//   });
 const server = http.createServer(app); // Rename http to server
 const io = new socketIO(server);
 

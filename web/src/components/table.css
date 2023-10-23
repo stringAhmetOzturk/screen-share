@@ -1,0 +1,18 @@
+.homeButton {
+    background-color: #46009c;
+    text-transform: uppercase;
+    font-weight: bold;
+    width: 50%;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 12px;
+    transition: background-color 0.3s ease;
+}
+
+/* Style the button hover effect */
+.homeButton:hover {
+    background-color: #23004d;
+    color: #fff;
+}

@@ -1,0 +1,26 @@
+{
+  "name": "codeboard-screencast-client",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "desktop-capture": "^0.1.1",
+    "electron-window-state": "^5.0.3",
+    "node-webcam": "^0.8.2",
+    "screenshot-desktop": "^1.12.3",
+    "socket.io-client": "^3.0.4",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "electron": "^11.5.0",
+    "electron-builder": "^24.6.4",
+    "electron-winstaller": "^5.1.0"
+  }
+}

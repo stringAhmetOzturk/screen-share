@@ -1,0 +1,26 @@
+{
+  "name": "codeboard-screencast-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@jitsi/robotjs": "^0.6.13",
+    "bcrypt": "^5.1.1",
+    "body-parser": "^1.20.2",
+    "child_process": "^1.0.2",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "mysql": "^2.18.1",
+    "node-run-cmd": "^1.0.1",
+    "nodemon": "^3.0.1",
+    "path": "^0.12.7",
+    "socket.io": "^3.0.4"
+  }
+}
